@@ -1,0 +1,11 @@
+{% extends 'layout.html' %}
+
+{% block conteudo %}
+<form action="{{url_for('login')}}" method="post">
+
+    <input type="text" name="matricula" placeholder="matricula">
+    <input type="password" name="password" placeholder="password">
+    <button>Enviar</button>
+
+</form>
+{% endblock %}

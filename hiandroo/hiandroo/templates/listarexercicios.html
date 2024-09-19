@@ -1,0 +1,14 @@
+{% extends 'layout.html' %}
+
+{% block conteudo %}
+
+<h1>exercicios cadastrados: </h1>
+<ul>
+    {% for ex in exercicios %}
+    <li>
+        {{ex['nome_ex']}} | {{ex['descricao']}}
+    </li>
+    {% endfor %}
+</ul>
+
+{% endblock %}

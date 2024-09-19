@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="{{url_for('static', filename='style.css')}}">
+
+</head>
+<body>
+
+    <div class="container">
+        <nav class="navbar">
+            {% block navbar %}
+                
+            {% endblock %}
+        </nav>
+        <a href="{{url_for('listarexercicios')}}">listar exercicios</a>
+        <a href="{{url_for('novo_exercicio')}}">Cadastrar exercicio</a>
+        <a href="{{url_for('logout')}}">Logout</a>    
+        <div class="main">
+            {% block conteudo %}
+                
+            {% endblock %}
+        </div>
+    </div>
+    
+</body>
+</html>
